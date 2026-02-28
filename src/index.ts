@@ -17,7 +17,7 @@ const prisma = new PrismaClient({
 
 app.use(express.json());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.post("/identify", async (req, res) => {
   const { email, phoneNumber } = req.body;
